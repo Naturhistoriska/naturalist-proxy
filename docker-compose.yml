@@ -13,3 +13,8 @@ services:
       - ./certs:/etc/nginx/certs:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx-proxy.conf:/etc/nginx/conf.d/nginx-proxy.conf:ro
+
+networks:
+  default:
+    external:
+       name: proxy_default
