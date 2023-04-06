@@ -1,11 +1,11 @@
-up-proxy:
+up:
 	docker-compose -f docker-compose.yml up -d 
 
-ps-proxy : 
+ps: 
 	docker-compose -f docker-compose.yml ps
 
 logs:
 	docker-compose -f docker-compose.yml logs -f
 
-down-proxy :
+down:
 	docker-compose -f docker-compose.yml down
