@@ -1,7 +1,8 @@
 # naturalist-proxy
 Proxy server, configured for naturforskaren
 
-## Wildfly - manual adjustment
+
+## Wildfly - manual adjustment of the context-root
 
 Step 1)
 - log in to the docker-container with the name 'naturalist'
