@@ -29,7 +29,32 @@ Step 2)
 
 ```
 
+
 Step 3) 
+- Reload the configuration
+```
+[standalone@localhost:9990 /] :reload
+{
+    "outcome" => "success",
+    "result" => undefined
+}
+``` 
+
+Step 4)
+- Set the default-web-module 
+
+``` 
+[standalone@localhost:9990 /] /subsystem=undertow/server=default-server/host=default-host:write-attribute(name=default-web-module,value=naturalist.war)
+{
+    "outcome" => "success",
+    "response-headers" => {
+        "operation-requires-reload" => true,
+        "process-state" => "reload-required"
+    }
+}
+``` 
+
+Step 5) 
 - Reload the configuration
 ```
 [standalone@localhost:9990 /] :reload
